@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.redsalt.core.datamodel/src" editDirectory="/org.redsalt.core.datamodel.edit/src"
+    modelPluginID="org.redsalt.core.datamodel" runtimeJar="true" modelName="Datamodel"
+    updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    testsDirectory="" booleanFlagsField="eFlags" booleanFlagsReservedBits="8" importerID="org.eclipse.emf.ecore.xcore.importer"
+    containmentProxies="true" complianceLevel="8.0" publicConstructors="true" language="en"
+    usedGenPackages="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore" operationReflection="true"
+    importOrganizing="true" decoration="Live" oSGiCompatible="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/exporter/org.eclipse.xsd.ecore.exporter">
+    <genAnnotations source="selectedPackages">
+      <details key="http://www.eclipse.org/emf/2002/Ecore" value="Ecore.xsd"/>
+    </genAnnotations>
+    <details key="directoryURI" value="."/>
+  </genAnnotations>
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/exporter/org.eclipse.xsd.ecore.exporter.xmi">
+    <genAnnotations source="selectedPackages">
+      <details key="http://www.eclipse.org/emf/2002/Ecore" value="EcoreXMI.xsd"/>
+    </genAnnotations>
+    <details key="directoryURI" value="."/>
+  </genAnnotations>
+  <foreignModel>datamodel.xcore</foreignModel>
+  <modelPluginVariables>org.eclipse.xtext.xbase.lib</modelPluginVariables>
+  <modelPluginVariables>org.eclipse.emf.ecore.xcore.lib</modelPluginVariables>
+  <genPackages prefix="Datamodel" basePackage="org.redsalt.core" disposableProviderFactory="true"
+      ecorePackage="datamodel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="datamodel.ecore#//ContactType">
+      <genEnumLiterals ecoreEnumLiteral="datamodel.ecore#//ContactType/GENERIC"/>
+      <genEnumLiterals ecoreEnumLiteral="datamodel.ecore#//ContactType/CUSTOMER"/>
+      <genEnumLiterals ecoreEnumLiteral="datamodel.ecore#//ContactType/EMPLOYEE"/>
+      <genEnumLiterals ecoreEnumLiteral="datamodel.ecore#//ContactType/LEGAL_ENTITY"/>
+      <genEnumLiterals ecoreEnumLiteral="datamodel.ecore#//ContactType/BANK"/>
+      <genEnumLiterals ecoreEnumLiteral="datamodel.ecore#//ContactType/VENDOR"/>
+      <genEnumLiterals ecoreEnumLiteral="datamodel.ecore#//ContactType/MAIN_CONTACT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="datamodel.ecore#//AccountType">
+      <genEnumLiterals ecoreEnumLiteral="datamodel.ecore#//AccountType/CASH"/>
+      <genEnumLiterals ecoreEnumLiteral="datamodel.ecore#//AccountType/BANK"/>
+      <genEnumLiterals ecoreEnumLiteral="datamodel.ecore#//AccountType/PAYPAL"/>
+      <genEnumLiterals ecoreEnumLiteral="datamodel.ecore#//AccountType/FOREIGN"/>
+      <genEnumLiterals ecoreEnumLiteral="datamodel.ecore#//AccountType/OTHER"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="datamodel.ecore#//CurrencyUnit"/>
+    <genDataTypes ecoreDataType="datamodel.ecore#//LocalDate"/>
+    <genClasses ecoreClass="datamodel.ecore#//Contact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Contact/organization"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Contact/contactType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Contact/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Contact/name2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Contact/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Contact/titleSuffix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Contact/dateOfBirth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Contact/street"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Contact/city"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Contact/zip"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Contact/region"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Contact/country"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Contact/telephone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Contact/fax"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Contact/email"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Contact/webPage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Contact/vatNo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Contact/remark"/>
+    </genClasses>
+    <genClasses ecoreClass="datamodel.ecore#//Account" labelFeature="#//datamodel/Account/label">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Account/accountType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference datamodel.ecore#//Account/managingContact"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference datamodel.ecore#//Account/owningContact"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Account/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Account/accountNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Account/currency"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference datamodel.ecore#//Account/bookings"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Account/balance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Account/iban"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Account/bic"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Account/remark"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Account/label"/>
+    </genClasses>
+    <genClasses ecoreClass="datamodel.ecore#//Booking">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Booking/bookingDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Booking/availabilityDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Booking/amount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Booking/currency"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Booking/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Booking/lineItem"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Booking/additionalText"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference datamodel.ecore#//Booking/account"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference datamodel.ecore#//Booking/remoteAccount"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference datamodel.ecore#//Booking/category"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Booking/entryReference"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Booking/remark"/>
+    </genClasses>
+    <genClasses ecoreClass="datamodel.ecore#//Category">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Category/categoryName"/>
+    </genClasses>
+    <genClasses ecoreClass="datamodel.ecore#//Invoice">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Invoice/outgoing"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference datamodel.ecore#//Invoice/sender"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference datamodel.ecore#//Invoice/recipient"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute datamodel.ecore#//Invoice/referenceId"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

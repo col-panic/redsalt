@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Group xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ToolBar>
+         <items>
+            <ComboBox fx:id="selectedContactCombo" prefWidth="150.0" />
+            <ToggleButton fx:id="contactsToggleButton" mnemonicParsing="false" text="Contacts">
+               <toggleGroup>
+                  <ToggleGroup fx:id="perspectiveToggleGroup" />
+               </toggleGroup>
+            </ToggleButton>
+            <ToggleButton fx:id="accountingToggleButton" mnemonicParsing="false" text="Accounting" toggleGroup="$perspectiveToggleGroup" />
+            <ToggleButton fx:id="invoicesToggleButton" mnemonicParsing="false" text="Invoices" toggleGroup="$perspectiveToggleGroup" />
+         </items>
+      </ToolBar>
+   </children>
+</Group>

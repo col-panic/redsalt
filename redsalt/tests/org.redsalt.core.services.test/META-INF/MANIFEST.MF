@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Test
+Bundle-SymbolicName: org.redsalt.core.services.test
+Bundle-Version: 0.0.1.qualifier
+Bundle-Vendor: redsalt.org
+Fragment-Host: org.redsalt.core.services;bundle-version="1.0.0.qualifier"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.redsalt.core.datamodel,
+ junit;bundle-version="4.8.2",
+ test-common

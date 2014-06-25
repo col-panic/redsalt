@@ -1,0 +1,22 @@
+@GenModel(updateClasspath="false", publicConstructors="true", editDirectory="/org.redsalt.core.appmodel.edit/src")
+package org.redsalt.core.appmodel
+
+import org.redsalt.core.datamodel.Account
+import org.redsalt.core.datamodel.Contact
+
+class RedSaltApplication {
+	contains Contacts contacts
+	contains Accounts accounts
+}
+
+class Contacts {
+	contains Contact[] contacts
+}
+
+class Accounts {
+	contains Account[] accounts
+	/* Find an account given its account number or iban, returns null if none found */
+	op Account findAccountByAccountNumberOrIban(String accountNumber) {
+		//		RedSaltApplicationMethods.findAccountByAccountNumberOrIban(this, accountNumber)
+	}
+}

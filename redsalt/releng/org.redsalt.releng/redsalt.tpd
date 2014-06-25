@@ -1,0 +1,56 @@
+target "redsalt"
+
+with source, allEnvironments
+
+location "http://download.eclipse.org/releases/luna" {
+	org.eclipse.rcp.sdk.id
+	org.eclipse.emf.ecore.xcore.sdk.feature.group
+	org.eclipse.xtext.sdk.feature.group
+	org.eclipse.emf.sdk.feature.group
+	org.eclipse.rcp.feature.group
+	org.eclipse.platform.feature.group
+}
+
+location "http://col-panic.github.io/repositories/redsalt-dependencies" {
+	jaxen
+	org.milyn.smooks-javabean
+	org.milyn.smooks-json
+	org.milyn.smooks-scripting
+	org.milyn.smooks-calc
+	org.milyn.smooks-edi
+	org.milyn.smooks-core
+	org.milyn.smooks-templating
+	org.milyn.smooks-csv
+	org.milyn.smooks-misc
+	org.milyn.smooks-fixed-length
+	org.milyn.smooks-rules
+	org.milyn.smooks-yaml
+	net.sf.opencsv [2.3.0,2.4.0)
+	org.milyn.smooks-validation
+	org.milyn.commons
+	commons-logging
+	org.mvel2
+	junit
+	org.freemarker
+	org.joda.money
+	org.controlsfx
+	org.modeshape.jcr
+	org.modeshape.jcr-api
+	org.modeshape.common
+	org.modeshape.schematic
+}
+
+location "http://download.eclipse.org/efxclipse/runtime-released/1.0.0/site" {
+	org.eclipse.fx.target.feature.feature.group
+}
+
+location "http://download.eclipse.org/ecp/milestones/140_M4" {
+	org.eclipse.emf.ecp.emfforms.runtime.feature.feature.group
+	org.eclipse.emf.ecp.emfforms.runtime.feature.source.feature.group
+	org.eclipse.emf.ecp.emfforms.sdk.feature.feature.group
+	org.eclipse.emf.ecp.ui.view.swt
+}
+
+//location "http://downloads.efxclipse.bestsolution.at/p2-repos/addons/nightly/site/" {
+// // https://wiki.eclipse.org/Efxclipse/Tutorials/Tutorial4
+//}

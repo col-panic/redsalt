@@ -1,0 +1,134 @@
+@GenModel(updateClasspath="false", publicConstructors="true", editDirectory="/org.redsalt.core.datamodel.edit/src")
+package org.redsalt.core.datamodel
+
+import java.time.LocalDate
+import org.joda.money.CurrencyUnit
+
+annotation "http://www.eclipse.org/emf/2002/GenModel" as GenModel
+
+type CurrencyUnit wraps CurrencyUnit
+create {
+	CurrencyUnit.of(it)
+}
+
+type LocalDate wraps LocalDate
+create {
+	LocalDate.parse(it)
+}
+
+/*
+ * A contact is a entity we can communicate with, being 
+ * either a person or an organization.
+ */
+class Contact {
+	boolean organization
+	boolean favourite
+	ContactType contactType
+	String name
+	String name2
+	String title
+	String titleSuffix
+	LocalDate dateOfBirth
+	String street
+	String city
+	String zip
+	String region
+	String country
+	String telephone
+	String fax
+	String email
+	String webPage
+	String vatNo
+	refers Account[] ownedAccounts
+	/* user generated remarks */
+	String remark
+}
+
+enum ContactType {
+	GENERIC = 0
+	CUSTOMER = 10
+	EMPLOYEE = 20
+	LEGAL_ENTITY = 30
+	BANK = 40
+	VENDOR = 50
+	USER = 999
+}
+
+/*
+ * An account is a logical container for money. It allows to
+ * book amounts of money from and to it. The account is associated
+ * with a contact that is responsible for managing this account and
+ * a contact owning it.
+ */
+@GenModel(labelFeature="label")
+class Account {
+	AccountType accountType
+	/* The contact responsible for managing the account, 
+	 * e.g. the bank institute
+	 */
+	refers Contact managingContact
+	/* The contact owning the account, that is the 
+	 * contact the money on the account belongs to
+	 */
+	refers Contact owningContact
+	String description
+	unique String accountNumber
+	CurrencyUnit currency
+	contains Booking[] bookings opposite account
+	/* the current balance on the account, calculated out of all bookings */
+	derived Double balance get {
+		val Double value = bookings.map[b1|b1.amount].reduce[p1, p2|p1 + p2]
+		return if (value!=null) value else 0d
+	}
+	// if AccountType#BANKING
+	String iban
+	String bic
+	/* user generated remarks */
+	String remark
+	derived String label get {
+		return "("+balance+") "+description
+	}
+}
+
+enum AccountType {
+	CASH = 0
+	BANK = 1
+	BANK_GIRO = 10
+	BANK_CREDIT = 11
+	PAYPAL = 2
+	OTHER = 99
+}
+
+/*
+ * A Booking is a flow of money from a referenced contact 
+ * to or from an Account.
+ */
+class Booking {
+	/* The date the booking is initiated */
+	LocalDate bookingDate
+	/* The date the amount is counted on the receiving account*/
+	LocalDate availabilityDate
+	/* The amount transferred to or from the remote account */
+	Double amount
+	CurrencyUnit currency
+	String description
+	String lineItem
+	String additionalText
+	refers Account account opposite bookings
+	refers Account remoteAccount
+	refers Category category
+	unique String entryReference
+	/* user generated remarks */
+	String remark
+}
+
+class Category {
+	String categoryName
+}
+
+class Invoice {
+	boolean outgoing
+	refers Contact sender
+	refers Contact recipient
+	unique String referenceId
+}

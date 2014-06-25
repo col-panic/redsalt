@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RedSalt Importer
+Bundle-SymbolicName: org.redsalt.core.importer
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.redsalt.core.importer.internal.Activator
+Bundle-Vendor: redsalt.org
+Service-Component: OSGI-INF/importService.xml, OSGI-INF/modelServiceConsumer.xml
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;bundle-version="2.10.0",
+ org.redsalt.core.datamodel;bundle-version="0.0.1",
+ org.redsalt.core,
+ org.redsalt.core.appmodel,
+ org.redsalt.core.services,
+ net.sf.opencsv;bundle-version="2.3.0",
+ org.joda.money
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Export-Package: org.redsalt.core.importer

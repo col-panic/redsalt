@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RedSalt e4 common
+Bundle-SymbolicName: org.redsalt.e4.ui.common;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: resalt.org
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Localization: plugin
+Import-Package: javax.annotation
+Require-Bundle: javax.inject,
+ org.eclipse.core.runtime;bundle-version="3.10.0",
+ org.eclipse.emf.ecore;bundle-version="2.10.0",
+ org.eclipse.emf.edit,
+ org.eclipse.e4.core.di,
+ org.eclipse.e4.core.contexts,
+ org.eclipse.e4.ui.workbench,
+ org.eclipse.e4.ui.model.workbench,
+ org.redsalt.core.services,
+ org.redsalt.core.appmodel,
+ org.redsalt.core.datamodel
+Export-Package: org.redsalt.e4.ui.common.handlers

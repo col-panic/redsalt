@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_3ArboC0gEeSNt66HRfVv9A" elementId="org.redsalt.application" bindingContexts="_3ArbqS0gEeSNt66HRfVv9A">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_3ArboS0gEeSNt66HRfVv9A" elementId="trimmedwindow.redsalt" label="%trimmedwindow.redsalt" bindingContexts="_3ArbqS0gEeSNt66HRfVv9A" width="1024" height="768">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_Hmr5sC0jEeSNt66HRfVv9A" elementId="perspectivestack">
+      <children xsi:type="advanced:Perspective" xmi:id="_NLp-IC0jEeSNt66HRfVv9A" elementId="perspective.contacts" label="%perspective.contacts">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_TXKeIC0jEeSNt66HRfVv9A" elementId="partsash.contacts" horizontal="true"/>
+      </children>
+      <children xsi:type="advanced:Perspective" xmi:id="_coA_MC23EeSqvcUwqokSig" elementId="perspective.accounting" label="%perspective.accounting"/>
+      <children xsi:type="advanced:Perspective" xmi:id="_fgMGMC23EeSqvcUwqokSig" elementId="perspective.invoices" label="%perspective.invoices"/>
+    </children>
+    <mainMenu xmi:id="_PTYl8C3vEeSSn88mAOe0Zw" elementId="trimmedwindow.menu.main">
+      <children xsi:type="menu:Menu" xmi:id="_PuZG8C3vEeSSn88mAOe0Zw" elementId="file" label="&amp;File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_TbcAcC3vEeSSn88mAOe0Zw" elementId="org.redsalt.e4.ui.common.handledmenuitem.save" label="save" command="_bVAvIC3LEeSqvcUwqokSig"/>
+      </children>
+    </mainMenu>
+    <trimBars xmi:id="_OH1kcC0hEeSNt66HRfVv9A" elementId="trimmedwindow.windowtrim.top"/>
+  </children>
+  <handlers xmi:id="_gOEv0C3LEeSqvcUwqokSig" elementId="handler.save" contributionURI="bundleclass://org.redsalt.e4.ui.common/org.redsalt.e4.ui.common.handlers.SaveHandler" command="_bVAvIC3LEeSqvcUwqokSig"/>
+  <bindingTables xmi:id="_Y0U7EC3LEeSqvcUwqokSig" elementId="redsalt.bindingtable" bindingContext="_3ArbqS0gEeSNt66HRfVv9A">
+    <bindings xmi:id="_i9F60C3LEeSqvcUwqokSig" elementId="keybinding.save" keySequence="M1+S" command="_bVAvIC3LEeSqvcUwqokSig"/>
+  </bindingTables>
+  <rootContext xmi:id="_3ArbqS0gEeSNt66HRfVv9A" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_3Arbqi0gEeSNt66HRfVv9A" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_3Arbqy0gEeSNt66HRfVv9A" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_bVAvIC3LEeSqvcUwqokSig" elementId="command.save" commandName="%command.save"/>
+  <addons xmi:id="_3Arboi0gEeSNt66HRfVv9A" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_3Arboy0gEeSNt66HRfVv9A" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_3ArbpC0gEeSNt66HRfVv9A" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_3ArbpS0gEeSNt66HRfVv9A" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_3Arbpi0gEeSNt66HRfVv9A" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_3Arbpy0gEeSNt66HRfVv9A" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+</application:Application>

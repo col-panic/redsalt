@@ -1,0 +1,12 @@
+/* Main CSS-File */
+.MTrimBar .tool-bar {
+    -fx-border-style: solid;
+    -fx-background-color: null;
+    -fx-border-color:  null;
+    -fx-border-width: 0.0px;
+}
+
+#save {
+  -fx-border-style: none;
+  -fx-background-color: null;
+}

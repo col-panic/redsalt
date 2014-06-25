@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<smooks-resource-list xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd"
+	xmlns:csv="http://www.milyn.org/xsd/smooks/csv-1.2.xsd" xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.4.xsd">
+
+    <!--
+       Sparkasse Österreich Import Konto-Bewegungen
+
+       #  CSV Header					Sample
+       01 Auftraggeber;					"MEDEVIT OG"
+       02 Auftraggeber Kontonr./IBAN;	3100733223
+       03 Bezeichnung;					"Buchkauf Amazon geb¸ndelt Descher Marco"
+       04 Valutadatum;					"11.01.2011"
+       05 Betrag;						"-111,91"
+       06 W‰hrung;						"EUR"
+       07 Auftraggeber BLZ/BIC;			20604
+       08 Partnername;					"Descher Marco"
+       09 Partner Kontonr./IBAN;		701122434
+       10 Partner BLZ/BIC;				20602
+       11 Kundendaten/Zahlungsreferenz;	
+       12 Buchungsdatum;				"11.01.2011"
+       13 Umsatzzeile 1;				"Buchkauf Amazon geb¸ndelt"
+       14 Umsatzzeile 2;				"Descher Marco"
+       15 Zusatztext;					"B¸cher: Spring 3 Eclipse RCP im Unternehmenseinsatz Eclipse Richt Client Platform"
+       16 Ersterfassungsreferenz		206041101112AIG-031203394415
+    -->
+    <csv:reader separator=";" skipLines="1"
+    	fields="initiatorName,initiatorAccountNumber,description,availabilityDate,amount,
+    	currency,initiatorBankCode,partnerName,partnerAccountNumber,partnerBankCode,
+    	customerData,bookingDate,salesLine1,salesLine2,additionalText,
+    	entryReference"/>
+
+	<jb:bean beanId="bookingList" class="java.util.ArrayList"
+		createOnElement="csv-set">
+		<jb:wiring beanIdRef="booking" />
+	</jb:bean>
+
+
+	<jb:bean beanId="booking" class="org.redsalt.core.datamodel.impl.BookingImpl"
+	createOnElement="csv-record">
+	<jb:value property="account"
+		decoder="org.redsalt.core.importer.smooks.decoders.AccountDecoder"
+		data="csv-record/initiatorAccountNumber" />
+	<jb:value property="description" data="csv-record/description" />
+	<jb:value property="availabilityDate" decoder="Date"
+		data="csv-record/availabilityDate">
+		<jb:decodeParam name="format">dd.MM.yyyy</jb:decodeParam>
+	</jb:value>
+	<jb:value property="amount" decoder="Double" data="csv-record/amount">
+		<jb:decodeParam name="format">###,##</jb:decodeParam>
+	</jb:value>
+	<jb:value property="bookingDate" decoder="Date"
+		data="csv-record/bookingDate">
+		<jb:decodeParam name="format">dd.MM.yyyy</jb:decodeParam>
+	</jb:value>
+	<jb:value property="entryReference" data="csv-record/entryReference" />
+</jb:bean>
+</smooks-resource-list>

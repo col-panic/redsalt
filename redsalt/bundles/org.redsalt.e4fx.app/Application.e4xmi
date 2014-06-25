@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_3usmMQCUEeSkyruCs8UO4Q" elementId="org.eclipse.e4.application" bindingContexts="_3usmMACUEeSkyruCs8UO4Q">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_zkttEAEYEeS8Y7ugCZHRlw" elementId="org.redsalt.e4fx.app.trimmedwindow.0" label="RedSalt" x="20" y="20" width="700" height="570">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_mpaiUAIrEeSUEPkDiGHBEA" elementId="perspectivestack" selectedElement="_oHWf8AIrEeSUEPkDiGHBEA">
+      <children xsi:type="advanced:Perspective" xmi:id="_oHWf8AIrEeSUEPkDiGHBEA" elementId="perspective.contacts" selectedElement="_A1vD4AHtEeSV85V9zJ5sDg" label="%contactsPerspective.label">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_A1vD4AHtEeSV85V9zJ5sDg" elementId="org.redsalt.e4fx.app.partsashcontainer.0" selectedElement="_FVS_cAHtEeSV85V9zJ5sDg" horizontal="true">
+          <children xsi:type="basic:Part" xmi:id="_FVS_cAHtEeSV85V9zJ5sDg" elementId="contactListView" contributionURI="bundleclass://org.redsalt.e4fx.ui.views/org.redsalt.e4fx.ui.views.ContactListView" label="%part.contactlist">
+            <handlers xmi:id="_LZgtUALtEeSNVeX0wg3Nng" elementId="" contributionURI="bundleclass://org.redsalt.e4fx.app/org.redsalt.e4fx.app.handlers.AddContactHandler" command="_XLlnYAH0EeSV85V9zJ5sDg"/>
+            <handlers xmi:id="_Q4-XgAXeEeSGQuebzyPV6w" elementId="" contributionURI="bundleclass://org.redsalt.e4fx.app/org.redsalt.e4fx.app.handlers.DeleteContactHandler" command="_D-jIcAXeEeSGQuebzyPV6w"/>
+            <menus xsi:type="menu:PopupMenu" xmi:id="_YyrI4ASEEeSPPqtlpkGLhA" elementId="contactListView.popupMenu">
+              <children xsi:type="menu:HandledMenuItem" xmi:id="_d_Kb4ASEEeSPPqtlpkGLhA" elementId="" label="delete" command="_D-jIcAXeEeSGQuebzyPV6w"/>
+            </menus>
+          </children>
+          <children xsi:type="basic:Part" xmi:id="_Fm_MYAHtEeSV85V9zJ5sDg" elementId="contactDetailView" contributionURI="bundleclass://org.redsalt.e4fx.ui.views/org.redsalt.e4fx.ui.views.ContactDetailsView"/>
+        </children>
+      </children>
+      <children xsi:type="advanced:Perspective" xmi:id="_q1YMcAIrEeSUEPkDiGHBEA" elementId="perspective.accounts" selectedElement="_AL3HwAKuEeSUEPkDiGHBEA" label="%accountsPerspective.label">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_AL3HwAKuEeSUEPkDiGHBEA" elementId="org.redsalt.e4fx.app.partsashcontainer.1">
+          <children xsi:type="advanced:Placeholder" xmi:id="_nyIKAA20EeSZb7d3rzAcRg" elementId="org.redsalt.e4fx.app.placeholder.0" containerData="20" ref="_dk-ZgA20EeSZb7d3rzAcRg"/>
+          <children xsi:type="basic:Part" xmi:id="_BY_CMAKuEeSUEPkDiGHBEA" elementId="org.redsalt.e4fx.app.part.3" containerData="80" contributionURI="bundleclass://org.redsalt.e4fx.ui.views/org.redsalt.e4fx.ui.views.AccountDetailsView"/>
+        </children>
+      </children>
+      <children xsi:type="advanced:Perspective" xmi:id="_TzpCUA20EeSZb7d3rzAcRg" elementId="perspective.bookings" label="%bookingsPerspective.label">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_bC8hoA20EeSZb7d3rzAcRg" elementId="org.redsalt.e4fx.app.partsashcontainer.2">
+          <children xsi:type="advanced:Placeholder" xmi:id="_uDsOsA20EeSZb7d3rzAcRg" elementId="org.redsalt.e4fx.app.placeholder.1" containerData="20" ref="_dk-ZgA20EeSZb7d3rzAcRg"/>
+          <children xsi:type="basic:Part" xmi:id="_z4_1MA20EeSZb7d3rzAcRg" elementId="org.redsalt.e4fx.app.part.0" containerData="80" contributionURI="bundleclass://org.redsalt.e4fx.ui.views/org.redsalt.e4fx.ui.views.BookingTableView">
+            <handlers xmi:id="_Pz0PYBKZEeSvPKZiYezZ6g" elementId="handler.import.bookings" contributionURI="bundleclass://org.redsalt.e4fx.app/org.redsalt.e4fx.app.handlers.ImportBookingsHandler" command="_d4qPMAKrEeSUEPkDiGHBEA"/>
+          </children>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_50P8AAEZEeS8Y7ugCZHRlw" elementId="menu:org.eclipse.ui.main.menu"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_dk-ZgA20EeSZb7d3rzAcRg" elementId="accountListView" contributionURI="bundleclass://org.redsalt.e4fx.ui.views/org.redsalt.e4fx.ui.views.AccountListView" label="%part.accountlist">
+      <menus xsi:type="menu:PopupMenu" xmi:id="_7V4coBEZEeSOFPG5dcy_mQ" elementId="accountListView.popupMenu"/>
+    </sharedElements>
+    <trimBars xmi:id="_CPgREAEaEeS8Y7ugCZHRlw" elementId="">
+      <children xsi:type="menu:ToolBar" xmi:id="_CxT9oAEaEeS8Y7ugCZHRlw" elementId="toolbar:org.eclipse.ui.main.toolbar">
+        <children xsi:type="menu:ToolControl" xmi:id="_kDSYIAIsEeSUEPkDiGHBEA" elementId="org.redsalt.e4fx.app.toolcontrol.0" contributionURI="bundleclass://org.redsalt.e4fx.app/org.redsalt.e4fx.app.toolcontrol.PerspectiveTabs"/>
+      </children>
+      <children xsi:type="menu:ToolBar" xmi:id="_bfvBcAVHEeSPPqtlpkGLhA" elementId="org.redsalt.e4fx.app.toolbar.0">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_cIeccAVHEeSPPqtlpkGLhA" elementId="" label="%commandName.undo" command="_DTVu4AVHEeSPPqtlpkGLhA"/>
+      </children>
+    </trimBars>
+    <trimBars xmi:id="_61Jb0AIrEeSUEPkDiGHBEA" elementId="toolbar:main.left" side="Left">
+      <children xsi:type="menu:ToolBar" xmi:id="_guAhIAKqEeSUEPkDiGHBEA" elementId="toolbar:main.left">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_Es0y4ALtEeSNVeX0wg3Nng" elementId="org.redsalt.e4fx.app.handledtoolitem.0" label="" iconURI="platform:/plugin/org.redsalt.e4fx.app/rsc/plus-circle.png" tooltip="%commandName.add.tooltip" command="_XLlnYAH0EeSV85V9zJ5sDg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_juAucAKqEeSUEPkDiGHBEA" elementId="handledtoolitem.save" label="" iconURI="platform:/plugin/org.redsalt.e4fx.app/rsc/disk-black.png" tooltip="%commandName.save.tooltip" command="_l-KOYAH1EeSV85V9zJ5sDg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_y63dsAKrEeSUEPkDiGHBEA" elementId="handledtoolitem.import" label="" iconURI="platform:/plugin/org.redsalt.e4fx.app/rsc/table-import.png" tooltip="%commandName.import.tooltip" command="_d4qPMAKrEeSUEPkDiGHBEA"/>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_0U974AH1EeSV85V9zJ5sDg" elementId="" contributionURI="bundleclass://org.redsalt.e4fx.app/org.redsalt.e4fx.app.handlers.SaveHandler" command="_l-KOYAH1EeSV85V9zJ5sDg"/>
+  <handlers xmi:id="_CQubUAVHEeSPPqtlpkGLhA" elementId="org.redsalt.e4fx.app.handler.0" contributionURI="bundleclass://org.redsalt.e4fx.app/org.redsalt.e4fx.app.handlers.UndoHandler" command="_DTVu4AVHEeSPPqtlpkGLhA"/>
+  <bindingTables xmi:id="_L8_-UASBEeSPPqtlpkGLhA" elementId="org.redsalt.e4fx.app.bindingtable.0" bindingContext="_3usmMACUEeSkyruCs8UO4Q">
+    <bindings xmi:id="_M6oEMASBEeSPPqtlpkGLhA" elementId="save" keySequence="M1+S" command="_l-KOYAH1EeSV85V9zJ5sDg"/>
+    <bindings xmi:id="_KaohsAVHEeSPPqtlpkGLhA" elementId="org.redsalt.e4fx.app.keybinding.0" keySequence="M1+Z" command="_DTVu4AVHEeSPPqtlpkGLhA"/>
+  </bindingTables>
+  <rootContext xmi:id="_3usmMACUEeSkyruCs8UO4Q" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_3usmMgCUEeSkyruCs8UO4Q" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_3usmMwCUEeSkyruCs8UO4Q" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_GLwEMAEaEeS8Y7ugCZHRlw" elementId="command.exit" commandName="%commandName.exit" description=""/>
+  <commands xmi:id="_XLlnYAH0EeSV85V9zJ5sDg" elementId="command.add" commandName="%commandName.add"/>
+  <commands xmi:id="_l-KOYAH1EeSV85V9zJ5sDg" elementId="command.save" commandName="%commandName.save"/>
+  <commands xmi:id="_d4qPMAKrEeSUEPkDiGHBEA" elementId="command.import" commandName="%commandName.import"/>
+  <commands xmi:id="_DTVu4AVHEeSPPqtlpkGLhA" elementId="command.undo" commandName="%commandName.undo"/>
+  <commands xmi:id="_D-jIcAXeEeSGQuebzyPV6w" elementId="command.delete" commandName="%commandName.delete"/>
+  <addons xmi:id="_3utNQACUEeSkyruCs8UO4Q" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_3utNQQCUEeSkyruCs8UO4Q" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_3utNQgCUEeSkyruCs8UO4Q" elementId="org.eclipse.fx.ui.keybindings.e4.service" contributionURI="bundleclass://org.eclipse.fx.ui.keybindings.e4/org.eclipse.fx.ui.keybindings.e4.BindingServiceAddon"/>
+  <addons xmi:id="_3utNQwCUEeSkyruCs8UO4Q" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_3utNRACUEeSkyruCs8UO4Q" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_3utNRQCUEeSkyruCs8UO4Q" elementId="org.eclipse.fx.ui.keybindings.e4.model" contributionURI="bundleclass://org.eclipse.fx.ui.keybindings.e4/org.eclipse.fx.ui.keybindings.e4.BindingProcessingAddon"/>
+  <addons xmi:id="_3utNRgCUEeSkyruCs8UO4Q" elementId="org.eclipse.e4.ui.workbench.addons.HandlerProcessingAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+</application:Application>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.redsalt</groupId>
+  <artifactId>redsalt-aggregator</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <properties>
+    <tycho.version>0.20.0</tycho.version>
+    <luna-repo.url>http://download.eclipse.org/releases/luna</luna-repo.url>
+  </properties>
+  <modules>
+    <module>bundles/org.redsalt.core.datamodel</module>
+    <module>bundles/org.redsalt.core.appmodel</module>
+    <module>bundles/org.redsalt.core.importer</module>
+    <module>bundles/org.redsalt.core</module>
+  </modules>
+  <repositories>
+    <repository>
+      <id>luna</id>
+      <url>${luna-repo.url}</url>
+      <layout>p2</layout>
+    </repository>
+  </repositories>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-maven-plugin</artifactId>
+        <version>${tycho.version}</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

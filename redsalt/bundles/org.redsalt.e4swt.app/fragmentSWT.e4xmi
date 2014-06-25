@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_lWtpUC3mEeSnvv-q6zjthA">
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_ekbyUC3oEeSnvv-q6zjthA" featurename="addons" parentElementId="org.redsalt.application">
+    <elements xsi:type="application:Addon" xmi:id="_MeymIC3pEeSSn88mAOe0Zw" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_A5wAMC3qEeSSn88mAOe0Zw" featurename="children" parentElementId="partsash.contacts">
+    <elements xsi:type="basic:Part" xmi:id="_vlo0EC3pEeSSn88mAOe0Zw" elementId="part.contacts" containerData="30" contributionURI="bundleclass://org.redsalt.e4swt.ui/org.redsalt.e4swt.ui.part.ContactListPart" label="%part.contacts"/>
+    <elements xsi:type="basic:Part" xmi:id="_0VGz4C3pEeSSn88mAOe0Zw" elementId="part.contactdetail" containerData="70" contributionURI="bundleclass://org.redsalt.e4swt.ui/org.redsalt.e4swt.ui.part.ContactDetailPart" label="%part.contactdetail"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_lq7TgDTxEeS-Vsnu8FVGAQ" featurename="children" parentElementId="trimmedwindow.windowtrim.top">
+    <elements xsi:type="menu:ToolControl" xmi:id="_sUY60DTxEeS-Vsnu8FVGAQ" elementId="contactselector.toolcontrol" contributionURI="bundleclass://org.redsalt.e4swt.ui/org.redsalt.e4swt.ui.toolcontrol.ContactSelectorToolControl"/>
+    <elements xsi:type="menu:ToolControl" xmi:id="_ubOEcDTxEeS-Vsnu8FVGAQ" elementId="perspectiveswitcher.toolcontrol" contributionURI="bundleclass://org.redsalt.e4swt.ui/org.redsalt.e4swt.ui.toolcontrol.PerspectiveSwitcherToolControl"/>
+  </fragments>
+</fragment:ModelFragments>

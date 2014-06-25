@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: RedSalt core
+Bundle-SymbolicName: org.redsalt.core
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.redsalt.core.Activator
+Bundle-Vendor: redsalt.org
+Require-Bundle: org.eclipse.core.runtime,
+ org.redsalt.core.appmodel,
+ org.eclipse.emf.ecore.xmi;bundle-version="2.10.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Export-Package: org.redsalt.core
